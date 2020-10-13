@@ -36,12 +36,12 @@ namespace YandexCup.PalindromicFactor
         private string[] FindAllPalindrome(string inputString)
         {
             var allSubstrings = new List<string>();
-            for (int length = 1; length < inputString.Length; length++)
+            for (var length = 1; length < inputString.Length; length++)
             {
                 // End index is tricky.
-                for (int start = 0; start <= inputString.Length - length; start++)
+                for (var start = 0; start <= inputString.Length - length; start++)
                 {
-                    string substring = inputString.Substring(start, length);
+                    var substring = inputString.Substring(start, length);
                     allSubstrings.Add(substring);
                 }
             }
