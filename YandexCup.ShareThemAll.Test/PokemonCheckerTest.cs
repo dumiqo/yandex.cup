@@ -62,6 +62,8 @@ namespace YandexCup.ShareThemAll.Test
         }
         
         [TestCase(new[] {1, 0, 0, 0, 1, 1, 1, 1, 0}, new[] {1, 0, 0, 0, 1, 1, 1, 1, 0})]
+        [TestCase(new[] {1, 0, 0, 0, 1, 1, 1, 1, 0}, new[] {1, 0, 0, 0, 2, 2, 2, 2, 0})]
+        [TestCase(new[] {1, 0, 0, 0, 1, 1, 1, 1, 0}, new[] {1, 2, 2, 2, 4, 4, 4, 4, 2})]
         public void TwoSquare_CanCachThemAll_SuccessTest(int[] firstSquare, int[] secondSquare)
         {
             var cacher = new PokemonChecker();
@@ -69,6 +71,16 @@ namespace YandexCup.ShareThemAll.Test
             points[0] = firstSquare;
             points[1] = secondSquare;
             Assert.IsTrue(cacher.CanCachThemAll(points));
+        }
+        
+        [TestCase(new[] {1, 0, 0, 0, 1, 1, 1, 1, 0}, new[] {1, 1, 3, 1, 5, 3, 5, 3, 3})]
+        public void TwoSquare_CanCachThemAll_FailedTest(int[] firstSquare, int[] secondSquare)
+        {
+            var cacher = new PokemonChecker();
+            var points = new int[2][];
+            points[0] = firstSquare;
+            points[1] = secondSquare;
+            Assert.IsFalse(cacher.CanCachThemAll(points));
         }
     }
 }

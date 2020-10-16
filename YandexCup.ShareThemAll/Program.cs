@@ -44,50 +44,52 @@ namespace YandexCup.ShareThemAll
             
             var squarePoints = new Point[0];
             var firstSquare = squars.First();
+            var firstCirles = circles.Take(2).ToArray();
+            
             if (circles.Any())
             {
-                squarePoints = circles.Take(2).Union(new[] {firstSquare.Points[0], firstSquare.Points[2]})
+                squarePoints = firstCirles.Concat(new[] {firstSquare.Points[0], firstSquare.Points[2]})
                     .ToArray();
                 if (!IsPointsOnSingleLine(squarePoints))
                     return false;
             
-                squarePoints = circles.Take(2).Union(new[] {firstSquare.Points[1], firstSquare.Points[3]})
+                squarePoints = firstCirles.Concat(new[] {firstSquare.Points[1], firstSquare.Points[3]})
                     .ToArray();
                 if (!IsPointsOnSingleLine(squarePoints))
                     return false;
 
-                squarePoints = circles.Take(2).Union(GetSquareXsidePoint(firstSquare)).ToArray();
+                squarePoints = firstCirles.Concat(GetSquareXsidePoint(firstSquare)).ToArray();
                 if (!IsPointsOnSingleLine(squarePoints))
                     return false;
             
-                squarePoints = circles.Take(2).Union(GetSquareYsidePoint(firstSquare)).ToArray();
+                squarePoints = firstCirles.Concat(GetSquareYsidePoint(firstSquare)).ToArray();
                 if (!IsPointsOnSingleLine(squarePoints))
                     return false;
             }
 
             squarePoints = squars.SelectMany(x => new Point[] {x.Points[0], x.Points[2]})
-                .Union(circles.Take(2))
+                .Concat(firstCirles)
                 .ToArray();
 
             if (IsPointsOnSingleLine(squarePoints))
                 return true;
 
             squarePoints = squars.SelectMany(x => new Point[] {x.Points[1], x.Points[3]})
-                .Union(circles.Take(2))
+                .Concat(firstCirles)
                 .ToArray();
 
             if (IsPointsOnSingleLine(squarePoints))
                 return true;
             
             squarePoints = squars.SelectMany(GetSquareXsidePoint)
-                .Union(circles.Take(2))
+                .Concat(firstCirles)
                 .ToArray();
 
             if (IsPointsOnSingleLine(squarePoints))
                 return true;
 
             squarePoints = squars.SelectMany(GetSquareYsidePoint)
-                .Union(circles.Take(2))
+                .Concat(firstCirles)
                 .ToArray();
 
             if (IsPointsOnSingleLine(squarePoints))
