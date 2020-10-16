@@ -20,6 +20,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexCup.PalindromicFactor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexCup.PalindromicFactor", "YandexCup.PalindromicFactor\YandexCup.PalindromicFactor.csproj", "{45589264-EF68-45CE-8385-3FBF5B8AB417}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexCup.ShareThemAll", "YandexCup.ShareThemAll\YandexCup.ShareThemAll.csproj", "{9CF26C50-A8F8-4523-B251-AAB9A1E4C974}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YandexCup.ShareThemAll.Test", "YandexCup.ShareThemAll.Test\YandexCup.ShareThemAll.Test.csproj", "{90EC2C9D-02D7-42DC-9CC1-84C15F0C8FE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +38,8 @@ Global
 		{237E185B-FEDB-44A1-B48A-B0C0F71037A9} = {307B2CE6-0F45-48BF-A686-C1699BBDB741}
 		{9C19593B-BBF8-4224-BF82-5FFE8E1E1D21} = {307B2CE6-0F45-48BF-A686-C1699BBDB741}
 		{45589264-EF68-45CE-8385-3FBF5B8AB417} = {307B2CE6-0F45-48BF-A686-C1699BBDB741}
+		{9CF26C50-A8F8-4523-B251-AAB9A1E4C974} = {307B2CE6-0F45-48BF-A686-C1699BBDB741}
+		{90EC2C9D-02D7-42DC-9CC1-84C15F0C8FE8} = {307B2CE6-0F45-48BF-A686-C1699BBDB741}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{FC005662-9521-4ED9-B287-BFC0F803553B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -68,5 +74,13 @@ Global
 		{45589264-EF68-45CE-8385-3FBF5B8AB417}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45589264-EF68-45CE-8385-3FBF5B8AB417}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45589264-EF68-45CE-8385-3FBF5B8AB417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CF26C50-A8F8-4523-B251-AAB9A1E4C974}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CF26C50-A8F8-4523-B251-AAB9A1E4C974}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CF26C50-A8F8-4523-B251-AAB9A1E4C974}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CF26C50-A8F8-4523-B251-AAB9A1E4C974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90EC2C9D-02D7-42DC-9CC1-84C15F0C8FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90EC2C9D-02D7-42DC-9CC1-84C15F0C8FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90EC2C9D-02D7-42DC-9CC1-84C15F0C8FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90EC2C9D-02D7-42DC-9CC1-84C15F0C8FE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

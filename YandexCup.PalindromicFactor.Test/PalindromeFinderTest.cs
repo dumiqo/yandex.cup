@@ -23,6 +23,10 @@ namespace YandexCup.PalindromicFactor.Test
         [TestCase("ffaza", "ff")]
         [TestCase("avadfaba", "aba")]
         [TestCase("faaafffffaaaaaaafffff", "aa")]
+        [TestCase("abazzzzzzzaba", "zz")]
+        [TestCase("aazzzzzzzaa", "aa")]
+        [TestCase("aazzzzzzzaa", "aa")]
+        [TestCase("ababababa", "aba")]
         public void FindSmallestTest(string inputString, string resultString)
         {
             var finder = new PalindromeFinder();
@@ -33,6 +37,7 @@ namespace YandexCup.PalindromicFactor.Test
         [TestCase("aba")]
         [TestCase("aa")]
         [TestCase("abzzzzzzzba")]
+        [TestCase("abazzzzzzzaba")]
         public void IsPalindromeTrueTest(string inputString)
         {
             var finder = new PalindromeFinder();
